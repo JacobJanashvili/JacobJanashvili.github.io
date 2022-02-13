@@ -1,0 +1,667 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("//cdn.web-fonts.ge/fonts/arial-geo/css/arial-geo.min.css");
+@import url("//cdn.web-fonts.ge/fonts/alk-sanet/css/alk-sanet.min.css");
+@import url("//cdn.web-fonts.ge/fonts/bpg-arial/css/bpg-arial.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1f2128;
+}
+
+.menu {
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  justify-content: center;
+}
+
+.menu-logo {
+  font-size: 25px;
+  letter-spacing: 2px;
+  padding-right: 5px;
+}
+
+.popular-movies-section {
+  width: 85%;
+  margin: 0 auto;
+  font-family: "ALK Sanet", sans-serif;
+  margin-bottom: 100px;
+}
+
+.top_rated-movies-section {
+  width: 85%;
+  margin: 0 auto;
+  font-family: "ALK Sanet", sans-serif;
+  overflow-x: hidden;
+  margin-bottom: 100px;
+}
+
+.upcoming-movies-section {
+  width: 85%;
+  margin: 0 auto;
+  font-family: "ALK Sanet", sans-serif;
+  overflow-x: hidden;
+  margin-bottom: 100px;
+}
+
+.top_rated-tv-section {
+  width: 85%;
+  margin: 0 auto;
+  font-family: "ALK Sanet", sans-serif;
+  overflow-x: hidden;
+}
+
+.search-field {
+  font-size: 1rem;
+  outline: none;
+  border: 2px solid #242731;
+  background-color: #242731;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  color: #fff;
+  border-radius: 0.25rem;
+  font-family: "BPG Arial", sans-serif;
+}
+
+.input-wrapper {
+  background-color: #242731;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  box-shadow: 0.15rem 0.25rem 0.25rem #242731;
+}
+
+.fa-ticket-alt {
+  color: orange;
+}
+
+.side-menu {
+  width: 90px;
+  height: 100vh;
+  position: fixed;
+  background-color: #242731;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+.fa-camera-movie {
+  font-size: 23px;
+  color: white;
+  opacity: 0.9;
+}
+
+.fa-search {
+  padding-right: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+}
+.navbar-nav {
+  list-style: none;
+  font-family: "ALK Sanet", sans-serif;
+}
+
+.active {
+  background-color: #1f2128;
+}
+.active::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.nav-li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 16px 18px;
+  margin-bottom: 1rem;
+}
+
+.nav-li p {
+  pointer-events: none;
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.nav-li i {
+  pointer-events: none;
+  font-size: 22px;
+  padding-bottom: 5px;
+}
+
+.homeCarousel {
+  margin: 0 auto;
+  width: 85%;
+  overflow: hidden;
+  position: relative;
+}
+
+.swiper-img {
+  object-fit: cover;
+  width: 100%;
+  height: 700px;
+  border-radius: 10px;
+  opacity: 0.6;
+}
+
+.homeCarouselDescription {
+  font-family: "Ubuntu", sans-serif;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  pointer-events: none;
+}
+
+.homeCarouselDescription p {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.homeCarouselDescription .genres {
+  display: flex;
+  color: white;
+}
+.homeCarouselDescription .genres li {
+  margin: 0 15px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.row_searched {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.row_image {
+  width: 100%;
+}
+
+.imdb svg {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+
+.imdb {
+  display: flex;
+  align-items: center;
+}
+.score {
+  padding-top: 10px;
+}
+.imdb span {
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+.fa-long-arrow-alt-left,
+.fa-long-arrow-alt-right {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  display: inline-block;
+  font-size: 30px;
+}
+.fa-long-arrow-alt-left {
+  top: 50%;
+  left: 1%;
+  color: #fff;
+}
+
+.fa-long-arrow-alt-right {
+  left: 95%;
+  top: 50%;
+  color: #fff;
+}
+
+main {
+  margin: 110px auto 0;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-title {
+  color: #fff;
+  font-weight: 400;
+  padding-left: 3px;
+}
+
+.fa-fire-alt {
+  color: orange;
+}
+
+.play {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50;
+  top: 0;
+  background-color: rgb(1 0 0 / 54%);
+  visibility: hidden;
+  transition: all 0.1s ease-in;
+  opacity: 0;
+}
+
+.play svg {
+  width: 60px;
+  height: 60px;
+  fill: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+
+.play a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+}
+
+.play:hover svg {
+  visibility: visible;
+}
+.play:hover {
+  visibility: visible;
+  opacity: 1;
+}
+.movie-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popular-movie-slider {
+  overflow-x: hidden;
+}
+
+.movie-img {
+  position: relative;
+}
+
+.imdb svg {
+  width: 40px;
+}
+
+.imdb p {
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.rates {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, #000 100%);
+  font-size: 13px;
+  padding-bottom: 8px;
+}
+
+.date {
+  border: 1px solid #fff;
+  padding: 1px 4px;
+}
+
+.date p {
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+}
+
+.popular-tv-shows {
+  width: 85%;
+  margin: 100px auto;
+  font-family: "ALK Sanet", sans-serif;
+  text-align: center;
+}
+
+.tv_img img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fa-popcorn {
+  color: orange;
+}
+
+.upcoming_movie_section {
+  width: 85%;
+  margin: 100px auto;
+  font-family: "ALK Sanet", sans-serif;
+}
+
+.fa-video {
+  color: orange;
+}
+
+.upcoming_movie_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.filter-movie-section {
+  padding-left: 100px;
+  padding-right: 10px;
+}
+
+.filter-movie {
+  flex: 0 0 300px;
+  margin: 10px auto;
+}
+
+.filter-movie-img {
+  position: relative;
+}
+
+.filter-movie-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title h2 {
+  font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.title a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.title a:hover {
+  text-decoration: underline;
+}
+
+.filter-movie:hover .title {
+  background-color: #242731;
+
+  box-shadow: -20px 29px 15px -3px rgba(0, 0, 0, 0.1),
+    0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+    -25px 10px 15px -3px rgba(0, 0, 0, 0);
+}
+
+.filter-movie:hover .play {
+  visibility: visible;
+}
+
+.filter-movie:hover .play svg {
+  visibility: visible;
+}
+
+.filter-tv-section {
+  padding-left: 100px;
+  padding-right: 10px;
+}
+
+.filter-tv {
+  margin: 10px auto;
+}
+
+.filter-tv-img {
+  position: relative;
+}
+
+.filter-tv-img img {
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.filter-tv:hover .title {
+  background-color: #242731;
+}
+
+.filter-tv:hover .play {
+  visibility: visible;
+}
+
+.filter-tv:hover .play svg {
+  visibility: visible;
+}
+
+.swiper-button-wrapper {
+  position: relative;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.clicked-movie-container {
+  margin: 0 auto;
+}
+
+.row_movie img {
+  object-fit: cover;
+}
+.row_movie {
+  width: 84%;
+  margin: 0 auto;
+}
+.row-searched {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 90px;
+  padding-right: 10px;
+}
+.movie_title {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.description {
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 300;
+  width: 100%;
+  margin-top: 30px;
+}
+.description_column p {
+  margin: 15px 0;
+}
+
+.video {
+  width: 100%;
+}
+
+.video iframe {
+  margin-left: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.title_with_logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title_with_logo img {
+}
+
+.logo_Tmdb img {
+  width: 80px;
+}
+
+.logo_Tmdb {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.logo_Tmdb p {
+  padding-left: 7px;
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 13px;
+}
+
+.overview {
+  margin-top: 50px;
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
+}
+
+.overview p {
+  padding-top: 10px;
+}
+
+@media (max-width: 1024px) {
+  .side-menu {
+    display: none;
+  }
+  .homeCarousel {
+    width: 100%;
+  }
+  .top_rated-tv-section {
+    width: 100%;
+  }
+  .popular-movies-section {
+    width: 100%;
+  }
+  .top_rated-movies-section {
+    width: 100%;
+  }
+  .upcoming-movies-section {
+    width: 100%;
+  }
+  .input-wrapper {
+    width: 100%;
+  }
+  .swiper-img {
+    border-radius: 4px;
+    height: 500px;
+  }
+  .menu-logo {
+    display: none;
+  }
+  .clicked-movie-container {
+    margin: 0 auto;
+  }
+  .row-searched {
+    padding: 0;
+  }
+  .movie-img {
+    display: none;
+  }
+  .videos {
+    width: 100%;
+  }
+  .video iframe {
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+  }
+
+}
+
+.fa-bars {
+  padding-right: 10px;
+}
+
+@media (max-width: 425px) and (min-width: 320px) {
+  .rates {
+    display: none;
+  }
+  .section-title {
+    font-size: 1rem;
+  }
+  .menu-logo {
+    display: none;
+  }
+  .genres {
+    margin: 0 auto;
+  }
+  .homeCarouselDescription {
+    left: 0;
+    margin-left: 25px;
+  }
+  .homeCarouselDescription p {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .logo_Tmdb p {
+    font-size: 1rem;
+  }
+  .logo_Tmdb {
+    margin: 0 auto;
+  }
+
+  .swiper-img {
+    border-radius: 4px;
+    height: 500px;
+  }
+  .movie-img {
+    display: none;
+  }
+  .videos {
+    width: 100%;
+  }
+  .video iframe {
+    width: 100%;
+    height: 200px;
+    margin-left: 0;
+  }
+  .row-searched {
+    padding: 0;
+  }
+}
